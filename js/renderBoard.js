@@ -5,7 +5,6 @@ export function renderBoard() {
   Board.innerHTML = "";
 
   AppState.columns.forEach((column) => {
-    console.log(column);
 
     const columnList = document.createElement("div");
     columnList.className = "column-list__column";
