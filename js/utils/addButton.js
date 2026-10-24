@@ -8,11 +8,15 @@ export function addButton() {
     const title = prompt("Введите название для колонки");
 
     if (title) {
-      AppState.columns.push({
+      let newColumn = {
         id: "col-" + Date.now(),
         title: title,
-        tasks: []
-      });
+        tasks: [],
+      }
+
+      AppState.push(newColumn);
+
+      localStorage.setItem("KB__columns", JSON.stringify(AppState));
 
       renderBoard();
     }
