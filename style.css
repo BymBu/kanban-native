@@ -32,6 +32,8 @@
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .column-list__column {
     display: flex;
@@ -45,7 +47,13 @@
     padding: 10px;
     align-items: center;
     border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.column-list__column:hover{
+  transform: scale(1.05);
+}
+
 .column__header {
     background-color: rgb(194, 174, 151);
     
